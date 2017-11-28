@@ -1,20 +1,23 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 /*
 *
-*TALLER 3 - Estructura de Datos- punto 3
+*TALLER 4 - Estructura de Datos-
 *	@author Danicas99
 *	@date 25-11-2017
 *	@version 2
 *
 */
 
-public class Interpolation_Search {
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+
+public class Interpolation_Search { //create class
 	
- static int BusquedaInterpolacion(int x, int []arr) {
+ static int BusquedaInterpolacion(int x, int []arr) { //parameter, array and X with value to search
 	 int lowerBound = 0;
 	 int higherBound = (arr.length - 1);
 	 while (lowerBound <= higherBound && x >= arr[lowerBound] && x <= arr[higherBound]){
@@ -33,7 +36,7 @@ public class Interpolation_Search {
 
 
 
- public static void main(String[] args) throws IOException {
+ public static void main(String[] args) throws IOException { //main method
 	BufferedReader br = new BufferedReader (new InputStreamReader (System.in));	
 	BufferedWriter bw = new BufferedWriter (new OutputStreamWriter (System.out));		
 	

@@ -3,6 +3,14 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+/*
+*
+*TALLER 3 - Estructura de Datos- punto 3
+*	@author Danicas99
+*	@date 25-11-2017
+*	@version 2
+*
+*/
 
 public class Interpolation_Search {
 	
@@ -31,7 +39,7 @@ public class Interpolation_Search {
 	
 	Interpolation_Search I_S= new Interpolation_Search() ;
 				
-	bw.write("escriba el tamaño del arreglo");
+	bw.write("escriba el tamaÃ±o del arreglo");
 	bw.flush();	
 	int T = Integer.parseInt(br.readLine());
 				
@@ -52,10 +60,10 @@ public class Interpolation_Search {
 			
 	int index= BusquedaInterpolacion(buscar, array);			
 	
-	System.out.print("\n"+"Busqueda por Interpolación \n");
+	System.out.print("\n"+"Busqueda por InterpolaciÃ³n \n");
 	
 	if (index != -1) 
-		System.out.println("es numero se encuentra en la posición o indice numero: "+index);
+		System.out.println("es numero se encuentra en la posiciÃ³n o indice numero: "+index);
 	
 	else
 	System.out.println("el numero no se encuentra dentro del arreglo");

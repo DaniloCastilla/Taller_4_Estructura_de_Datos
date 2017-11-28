@@ -21,7 +21,7 @@ def Quick_sort(V): #funtion quick sort, parameter: Array
         mayor = Quick_sort(mayor) #order higher
     return menor + igual + mayor #return the three arrays in order
 
-def main():
+def main():#method main
     
     Tamain = (input("Escriba la Sucesion de numeros separados por comas \n")) ##Escribir los numeros separados por comas
     print(Tamain)

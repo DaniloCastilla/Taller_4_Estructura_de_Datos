@@ -5,6 +5,18 @@
 
 
 #include <conio.h>
+/*
+*
+*         TALLER 4 
+*Estructura de Datos- punto 1
+*
+* @author Danicas99
+*	
+* @date 25-11-2017
+*	
+* @version 2
+*
+*/
 
 
 
@@ -58,6 +70,7 @@ int main()
 
 
 
+// Exchange method using a temporary
 
 
 

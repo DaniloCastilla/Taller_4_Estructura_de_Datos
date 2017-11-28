@@ -6,24 +6,20 @@ Created on 28 nov. 2017
 
 from random import randint
 
-
-def Quick_sort(V): ##Definimos una funcion para el metodo de ordenamiento
-    pivote = len(V)//2 ##Seleccionamos un pivote sacando el entero de la divison del arreglo
-    menor, igual, mayor = [],[],[] ##Se crean tres matrices para para asignar valores
+def Quick_sort(V): #funtion quick sort, parameter: Array
+    pivote = len(V)//2 #Mark pivote (index)
+    menor, igual, mayor = [],[],[] #create three array
     
-    for i in range(len(V)):
-        if(V[i] < V[pivote]): menor.append(V[i])  ##Condicional que pregunta si es igual
-            
-        elif(V[i]> V[pivote]):  mayor.append(V[i]) ##Segundo condicional que nos dice si es mayo
-           
-        else: igual.append(V[i]) ##Si no e sigual, ni es mayor, por lo tanto es menor y solo se agrega al arreglo que le correpsonde
+    for i in range(len(V)):#cycle for since 0 to tamain of the array
+        if(V[i] < V[pivote]): menor.append(V[i]) #conditional (if array v in the possition i is less to array v in the possition pivote, add to menor this value
+        elif(V[i]> V[pivote]): mayor.append(V[i])#conditional (if array v in the possition i is gigher to array v in the possition pivote, add to menor this value
+        else: igual.append(V[i])#end conditional #conditional (if array v in the possition i is gigher to array v in the possition pivote, add to menor this value
         
-    if len(menor)>1: 
-        menor = Quick_sort(menor)
-    if len(mayor)>1: 
-        mayor = Quick_sort(mayor)
-    return menor + igual + mayor ##Retornará el arreglo ordenado concatenando sus arreglos respectivos
-
+    if len(menor)>1: #if the size is higher to 1, join the funtion and will arrange 
+        menor = Quick_sort(menor)#order less
+    if len(mayor)>1: #if the size is higher to 1, join the funtion and will arrange 
+        mayor = Quick_sort(mayor) #order higher
+    return menor + igual + mayor #return the three arrays in order
 
 def main():
     

@@ -12,7 +12,8 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
 public class Merge_Sort {//Main Class
-	 public static void imprimeArray(int[] array){
+	 public static void imprimeArray(int[] array)
+	 {//Method that prints an array by screen
 	        for (int i = 0; i < array.length; i++) {
 	            System.out.print("[" + array[i] + "]");
 	        }

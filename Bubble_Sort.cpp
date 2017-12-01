@@ -1,132 +1,78 @@
-
+//============================================================================
+// Name        : Bubblesort_c++.cpp
+// Author      : Danicas
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+#include <vector>
+#include <string>
+#include <sstream>
 #include <iostream>
-
-
-
-
 #include <conio.h>
-/*
-*
-*         TALLER 4 
-*Estructura de Datos- punto 1
-*
-* @author Danicas99
-*	
-* @date 25-11-2017
-*	
-* @version 2
-*
-*/
 
+ using namespace std;
 
+ void Bubblesort(int array[] , int Tm){ //Method BubbleSort
 
+	 int aux;
+	 for(int i = 0 ; i < Tm ; i++){
+		 for(int j = 0; j < Tm ; j++){
+			 if(array[j] > array[j+1])
+			 {
+				 aux = array[j];
+				 array[j] = array[j+1];
+				 array[j+1] = aux;
 
+			 }
+		 }
+	 }
 
+ }//end Method
 
-using namespace std;
+  void Imprimir_Arreglo(int array[], int tam){ //method to print array
+  	for(int i = 0 ; i < tam ; i++){
+ 		cout << "["<<array[i]<<"]";
+	 }
+  }//end method
 
+ int main(){//Main method
 
-int main()
+	 	int x;
+	  	string Cadena;
+	    vector<int> vect;
 
+	    cout <<"ingrese el tamaño del arreglo: " << endl;
+	    cin >> x;
+	    int Vector[x];
+	    cout << "Digite la cadena de caracteres separado por comas: \n";
+	    cin >> Cadena;
+	    stringstream Separated(Cadena);
 
-{
+	    int i;
 
+	    while (Separated >> i){
+	         vect.push_back(i);
+	         if (Separated.peek() == ',')
+	       	Separated.ignore();
+	    }
 
-   int vector[5];
+	    int Tm = vect.size();
+	    cout << "Tamaño del vector " << Tm << endl;
+	    for (i=0; i< Tm; i++){
 
+	     	Vector[i] = vect.at(i);
 
-   int i, j , temp;
+	    }
 
+	    Bubblesort(Vector,x);
 
+	    cout << "El vector ordenado es" << endl;
 
+	    Imprimir_Arreglo(Vector,x);
 
+	    getch();
+	    return 0;
 
 
-   cout<<" Ingrese los numeros a ordenar "<<endl;
-
-
-   {
-
-
-       for(i=0;i<5;i++)
-
-
-       {
-
-
-           cout<<i+1<<" -> ";
-
-
-           cin>>vector[i];
-
-
-           cout<<endl;
-
-
-       }
-
-
-   }
-
-
-
-// Exchange method using a temporary
-
-
-
-   for(i=0;i<5;i++)
-
-
-   {
-
-
-       for(j=i+1;j<5;j++)
-
-
-       {
-
-
-           if(vector[j]<vector[i])
-
-
-           {
-
-
-               temp=vector[j];
-
-
-               vector[j]=vector[i];
-
-
-               vector[i]=vector[j];
-
-
-               vector[i]=temp;
-
-
-           }
-
-
-       }
-
-
-   }
-
-
-   for(i=0;i<5;i++)
-
-
-   {
-
-
-       cout<<vector[i]<<" ";
-
-
-   }
-
-
-   return 0;
-
-
-}
-
+ }//end Method
